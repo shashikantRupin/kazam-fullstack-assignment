@@ -22,7 +22,7 @@ io.on("connection", (socket) => {
   console.log(`Client connected: ${socket.id}`);
 
   socket.on("add", async (task: any) => {
-    const key = "FULLSTACK_TASK_DIVYANSHU";
+    const key = "FULLSTACK_TASK_RUPIN";
     try {
       const result = await redisClient.lPush(key, JSON.stringify(task));
       console.log("LPUSH Result:", result);
@@ -48,7 +48,7 @@ io.on("connection", (socket) => {
 });
 
 app.get("/api/fetchAllTasks", async (req:any, res:any) => {
-  const key = "FULLSTACK_TASK_DIVYANSHU";
+  const key = "FULLSTACK_TASK_RUPIN";
   try {
     const redisItems = await redisClient.lRange(key, 0, -1);
     const parsedRedisItems = redisItems.map((item: string) => JSON.parse(item));
