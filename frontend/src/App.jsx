@@ -3,6 +3,9 @@ import { io } from "socket.io-client";
 import axios from "axios";
 import Task from "./components/Task";
 import {api} from "./constants/api"
+import { CalendarIcon } from "@heroicons/react/24/outline";
+import { PlusIcon } from "@heroicons/react/24/outline";
+
 
 const socket = io(api);
 
@@ -38,10 +41,11 @@ function App() {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen px-4">
-      <div className=" w-full max-w-md h-[60vh] p-5 rounded-xl shadow-2xl">
-        <div>
-          <h1 className="text-2xl font-bold text-center">Note App</h1>
+    <div className="flex justify-center items-center h-screen px-4 py-4">
+      <div className=" w-full max-w-md h-[60vh] p-5 shadow-[0_0_10px_0_rgba(0,0,0,0.2)]">
+        <div className="flex items-center gap-2">
+          <CalendarIcon className="w-6 h-6 text-amber-800" />
+          <h1 className="text-2xl font-bold ">Note App</h1>
         </div>
         <div className="flex gap-5 mt-5">
           <input
@@ -51,9 +55,10 @@ function App() {
             onChange={(e) => setNewTask(e.target.value)}
           />
           <button
-            className="bg-amber-800 px-4 py-1 rounded-lg text-white"
+            className="bg-amber-800 px-4 py-2 rounded-lg text-white flex items-center gap-2 cursor-pointer"
             onClick={handleAdd}
           >
+            <PlusIcon className="w-5 h-5 text-amber-800 bg-white rounded-full p-1" />
             Add
           </button>
         </div>
