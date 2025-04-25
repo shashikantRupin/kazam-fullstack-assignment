@@ -1,6 +1,6 @@
 import React from "react";
 
-const Task = ({ item }) => {
+const Todo = ({ item }) => {
   return (
     <div>
       <h1>{item?.task}</h1>
@@ -9,4 +9,4 @@ const Task = ({ item }) => {
   );
 };
 
-export default Task;
+export default Todo;
