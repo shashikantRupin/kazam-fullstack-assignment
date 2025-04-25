@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import { io } from "socket.io-client";
 import axios from "axios";
 import Task from "./components/Task";
+import {api} from "./constants/api"
 
-const socket = io("http://localhost:8080");
+const socket = io(api);
 
 function App() {
   const [tasks, setTasks] = useState([]);
@@ -11,7 +12,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/api/fetchAllTasks")
+      .get(`${api}/api/fetchAllTasks`)
       .then((response) => setTasks(response.data))
       .catch((error) => console.error("Error fetching tasks:", error));
   }, []);

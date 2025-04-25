@@ -1,0 +1,1 @@
+export const api = "https://kazam-fullstack-assignment-1.onrender.com";
