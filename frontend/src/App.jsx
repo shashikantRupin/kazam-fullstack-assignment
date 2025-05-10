@@ -40,8 +40,8 @@ function App() {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen px-4 py-4">
-      <div className=" w-full max-w-md h-[60vh] p-5 shadow-[0_0_10px_0_rgba(0,0,0,0.2)]">
+    <div className="flex justify-center items-center h-screen px-4 py-4  box-border">
+      <div className=" w-full max-w-md h-[60vh] p-5 shadow-[0_0_10px_0_rgba(0,0,0,0.2)] mx-auto box-border  px-2">
         <div className="flex items-center gap-2">
           <FaBook className="text-amber-800 w-5 h-6" />
           <h1 className="text-2xl font-bold ">Note App</h1>
