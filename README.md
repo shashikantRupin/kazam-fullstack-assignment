@@ -82,4 +82,4 @@ your-repo-name/
 
 
 ## 📬 Contact
-For any questions or feedback, feel free to reach out via [LinkedIn](https://www.linkedin.com/in/rupin-raj-d98/) or create an issue in
+For any questions or feedback, feel free to reach out via [LinkedIn](https://linkedin.com) or create an issue in
