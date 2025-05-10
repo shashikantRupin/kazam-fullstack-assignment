@@ -40,13 +40,11 @@ function App() {
   return (
     <div className="flex justify-center items-center h-screen px-4 py-4 box-border">
       <div className="w-full max-w-md h-[60vh] p-5 shadow-[0_0_10px_0_rgba(0,0,0,0.2)] mx-auto box-border px-2 flex flex-col">
-        {/* Header */}
+        
         <div className="flex items-center gap-2">
           <FaBook className="text-amber-800 w-5 h-6" />
           <h1 className="text-2xl font-bold">Note App</h1>
         </div>
-
-        {/* Input + Button */}
         <div className="flex flex-col sm:flex-row gap-3 mt-5">
           <input
             placeholder="New Note"
@@ -63,7 +61,6 @@ function App() {
           </button>
         </div>
 
-        {/* Notes List - scrollable area that flexes */}
         <div className="mt-5 px-2 py-1 flex flex-col gap-3 overflow-y-auto flex-1 min-h-0">
           <h1 className="font-semibold">Notes</h1>
           {tasks.map((item, index) => (
